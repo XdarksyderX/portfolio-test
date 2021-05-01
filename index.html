@@ -5,36 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/styles.css"/>
+    <script src="https://kit.fontawesome.com/50e6e44c4a.js" crossorigin="anonymous"></script>
     <title>Portfolio</title>
 </head>
 <body>
     <header>
+        <div class="sidebar">
+            <i class="fas fa-bars sidebar-button"></i>
+            <ul id="sidebar-elements" class="active inactive" >
+                <button class="sidebar-button button" id="close-sidebar-button"><i class="fas fa-times close-sidebar-button"></i></button>
+                <li><a href="./contact.html" class="button">CONTACT</a></li>
+                <li><button class = "theme-switch"><i class="fas fa-sun"></i></button></li>
+            </ul>
+        </div>
         <h1>MIGUEL GARCÍA - FULL STACK DEVELOPER</h1>
-        <a href="./contact.html">CONTACT</a>
+        <nav>
+            <button class="radius theme-switch"><i class="fas fa-sun"></i></button>
+            <a href="./contact.html" class="button" >CONTACT</a>
+        </nav>
     </header>
     <main>
         <section class="general-information">
-            <h1>GENERAL INFORMATION</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus quibusdam, autem rerum temporibus nulla nobis corporis ab totam recusandae est dolore deserunt veniam ipsam ipsum fuga sed cupiditate soluta. Sunt?</p>
-            <img src="https://static.wikia.nocookie.net/reinoanimalia/images/7/74/Lobo_gris.jpg/revision/latest?cb=20121211084415&path-prefix=es">
+            <h1 class="title" >GENERAL INFORMATION</h1>
+            <div class="general-information-container ">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus quibusdam, autem rerum temporibus nulla nobis corporis ab totam recusandae est dolore deserunt veniam ipsam ipsum fuga sed cupiditate soluta. Sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi explicabo rerum, cupiditate similique odio qui fugiat, doloribus nobis atque dolor quos quas quia blanditiis sed hic saepe dicta adipisci labore!</p>
+                <img src="https://static.wikia.nocookie.net/reinoanimalia/images/7/74/Lobo_gris.jpg/revision/latest?cb=20121211084415&path-prefix=es">
+            </div>
         </section>
         <section class="projects">
-            <h1>PROJECTS</h1>
+            <h1 class="title" >PROJECTS</h1>
             <div class="projects-container">
                 <div class="project">
                     <h1>PROJECT 1 - COMPANY</h1>
-                    <img src="https://images-na.ssl-images-amazon.com/images/I/71kfovOgW3L._AC_SY879_.jpg"/>
+                    <img src="./prueba.jpeg"/>
+                </div>
+                <div class="project">
+                    <h1>PROJECT 1 - COMPANY</h1>
+                    <img src="./prueba.jpeg"/>
+                </div>
+                <div class="project">
+                    <h1>PROJECT 1 - COMPANY</h1>
+                    <img src="./prueba.jpeg"/>
+                </div>
+                <div class="project">
+                    <h1>PROJECT 1 - COMPANY</h1>
+                    <img src="./prueba.jpeg"/>
+                </div>
+                <div class="project">
+                    <h1>PROJECT 1 - COMPANY</h1>
+                    <img src="./prueba.jpeg"/>
+                </div>
+                <div class="project">
+                    <h1>PROJECT 1 - COMPANY</h1>
+                    <img src="./prueba.jpeg"/>
                 </div>
             </div>
         </section>
         <section class="abilities">
-            <h1>ABILITIES</h1>
-            <div class="abilties-container">
-                <img />
-                <img />
-                <img />
+            <h1 class="title">ABILITIES</h1>
+            <div class="abilities-container">
+                <i class="fab fa-html5"></i>
+                <i class="fab fa-css3-alt"></i>
+                <i class="fab fa-js"></i>
+                <i class="fab fa-python"></i>
+                <i class="fas fa-terminal"></i>
+                <i class="fab fa-git-alt"></i>
             </div>
         </section>
     </main>
+    <script src="./script.js" type="text/javascript"></script>
 </body>
 </html>
