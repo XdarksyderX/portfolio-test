@@ -16,7 +16,7 @@ const switchTheme = ev => {
         
         document.documentElement.style
         .setProperty('--titles-default', 'white');
-        ev.target.classList = `fas fa-sun`
+        ev.target.classList = ` fas fa-sun `
 
         document.documentElement.style
         .setProperty('--project-background', 'rgb(36, 36, 36)');
@@ -35,7 +35,7 @@ const switchTheme = ev => {
         
         document.documentElement.style
         .setProperty('--project-background', ' rgb(98, 79, 72)');
-        ev.target.classList = `fas fa-moon`;
+        ev.target.classList = ` fas fa-moon `;
         document.getElementsByClassName('projects-container')[0].style.backgroundColor = ' rgb(158, 157, 153)';
     }
 }
