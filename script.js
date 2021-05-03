@@ -1,5 +1,4 @@
 const themeSwitchButtons = document.getElementsByClassName('theme-switch');
-console.log(themeSwitchButtons)
 
 const switchTheme = ev => {
     let currentBackgroundColor = getComputedStyle(document.documentElement)
@@ -17,7 +16,7 @@ const switchTheme = ev => {
         
         document.documentElement.style
         .setProperty('--titles-default', 'white');
-        ev.target.children[0].classList = `fas fa-sun`
+        ev.target.classList = `fas fa-sun`
 
         document.documentElement.style
         .setProperty('--project-background', 'rgb(36, 36, 36)');
@@ -36,7 +35,7 @@ const switchTheme = ev => {
         
         document.documentElement.style
         .setProperty('--project-background', ' rgb(98, 79, 72)');
-        ev.target.children[0].classList = `fas fa-moon`;
+        ev.target.classList = `fas fa-moon`;
         document.getElementsByClassName('projects-container')[0].style.backgroundColor = ' rgb(158, 157, 153)';
     }
 }
@@ -45,12 +44,18 @@ for (let themeSwitchButton of themeSwitchButtons)
     themeSwitchButton.addEventListener('click', switchTheme)
 
 
-let sideBarButtons = document.getElementsByClassName('sidebar-button');
-for (let sideBarButton of sideBarButtons) {
+
+let visibleContent = document.getElementById('visible-content');
+visibleContent.addEventListener('click', ev => {
+    let sidebar = document.getElementById('sidebar-elements');
+        sidebar.classList.toggle('inactive-sidebar')
+        visibleContent.classList.toggle('inactive-visible-content')
+})
+
+
+let sideBarButton = document.getElementById('sidebar-button');
     sideBarButton.addEventListener('click', ev => {
         let sidebar = document.getElementById('sidebar-elements');
-        console.log(sidebar);
-        sidebar.classList.toggle('inactive')
-
+        sidebar.classList.toggle('inactive-sidebar')
+        visibleContent.classList.toggle('inactive-visible-content');
     })
-}

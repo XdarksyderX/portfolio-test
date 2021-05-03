@@ -1,4 +1,5 @@
 
+
 :root {
     --background-default: rgb(36, 36, 36);  
     --foreground-default: rgb(255, 255, 203);
@@ -40,6 +41,8 @@ header {
     margin-right: 3vw;
 }
 
+
+
 header h1{
     font-size: 1.5rem;
     margin-left: 1rem;
@@ -71,6 +74,8 @@ header h1{
 
 .radius {
     border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
 }
 
 .theme-switch:hover {
@@ -80,14 +85,17 @@ header h1{
 }
 
 
-nav a:hover {
+.button:hover {
     background-color: var(--foreground-default);
     color: var(--background-default);
     transition: 0.3s;
 }
 
-.sidebar-button {
+#sidebar-button {
+    display: none;
     color: var(--background-default);
+    font-size: 1.5rem;
+    margin: auto 0.7rem;
 }
 
 
@@ -95,7 +103,7 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     position: fixed;
-    background: var(--background-default);
+    background: var(--foreground-default);
     border-right: 1px solid black;
     top: 0;
     height: 100%;
@@ -103,39 +111,63 @@ nav a:hover {
     align-items: center;
 }
 
-#close-sidebar-button {
-    outline: none;
-    color: var(--foreground-default);
-}
-
 #sidebar-elements {
-    text-align: left;
+    z-index: 10;
+    display: flex;
+    align-items: center;
     margin: 0;
+    padding: 2rem;
     list-style:  none;
 }
 
+#sidebar-elements img {
+    border: 1px solid black;
+    width: 10rem;
+    height: 12rem;
+}
+
 #sidebar-elements li{
-    margin: 1rem 0;
-    margin-right: 2vw;
+    margin: 0;
+    margin-right: 0
 }
 
-#sidebar-elements a{
-    margin: 1rem 0;
-    width: 6rem;
-    padding: 0;
-}
-#sidebar-elements button{
-    margin: 0.5rem 0;
-    width: 7rem;
-    padding: 0;
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    background-color: var(--foreground-default);
+    padding: 0.5rem;
     border-radius: 5px;
+    height: 100%;
 }
 
-.active {
+.buttons button {
+    margin: 0;
+    width: 80%;
+}
+
+
+.buttons li .theme-switch {
+    margin: 0;
+    width: 80%;
+    border-radius: 5px
+}
+
+.buttons li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+
+
+
+.active-sidebar {
     left: 0;
 }
 
-.inactive {
+.inactive-sidebar {
     left: -100%;
 }
 
@@ -155,11 +187,26 @@ header + main {
     font-weight: 300;
 }
 
+.visible-content {
+    position: fixed;
+    width: 150%;
+    height: 150%;
+    z-index: 9;
+}
 
+.active-visible-content {
+    display: block;
+}
+
+.inactive-visible-content {
+    display: none;
+}
 
 .general-information-container p {
     width: 60%;
+    text-align: center;
     font-size: 1.7rem;
+    margin: 0 auto;
     margin-right: 5em;
     background-color: white;
     padding: 3rem;
@@ -206,7 +253,7 @@ header + main {
     border-radius:5px;  
 }
 
-.project h1 {
+.project h1 {color: var(--background-default);
     color: rgb(255, 255, 203);
     font-size: 1.3vw;
     font-weight: 700;
@@ -259,8 +306,11 @@ header + main {
         margin-top: 0;
         
     }
-
     .sidebar {
+        display: block;
+    }
+
+    #sidebar-button {
         display: inline-block;
     }
 
@@ -278,6 +328,10 @@ header + main {
 
     header nav {
         display: none;
+    }
+
+    header + main {
+        padding-top: 3rem
     }
 
     .general-information-container {
@@ -300,6 +354,7 @@ header + main {
         width: 100%;
         grid-column: 1 /-1;
         grid-row: 1;
+        margin-bottom: 1.5rem;
     }
 
     .projects {
@@ -337,4 +392,19 @@ header + main {
         font-size: 15vw;
         margin: 3vw;
     }
+}
+
+
+
+
+
+.contact p {
+    width: 60%;
+    text-align: center;
+    font-size: 1.7rem;
+    margin: 0 auto;
+    margin-right: 5em;
+    background-color: white;
+    padding: 3rem;
+    border-radius: 10px;
 }

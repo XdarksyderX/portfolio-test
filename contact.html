@@ -1,23 +1,43 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css"/>
+    <script src="https://kit.fontawesome.com/50e6e44c4a.js" crossorigin="anonymous"></script>
     <title>Portfolio</title>
 </head>
 <body>
+    <div id = "visible-content" class="visible-content active-visible-content inactive-visible-content"></div>
+    <div class="sidebar">
+        <ul id="sidebar-elements" class="active-sidebar inactive-sidebar" >
+            <img class="radius"src="./prueba.jpeg">
+            <div class="buttons">
+                <li><a href="./index.html" class="button">HOME</a></li>
+                <li><button class = "theme-switch"><i class="fas fa-sun"></i></button></li>
+            </div>
+        </ul>
+    </div>
     <header>
+        <i class="fas fa-bars" id="sidebar-button"></i>
         <h1>MIGUEL GARCÍA - FULL STACK DEVELOPER</h1>
-        <a href="./index.html">HOME</a>
+        <nav>
+            <button class="radius theme-switch"><i class="fas fa-sun"></i></button>
+            <a href="./index.html" class="button" >HOME</a>
+        </nav>
     </header>
+    <main>
     <section class="contact">
-        <h1>CONTACT ME!</h1>
-        <div class="ways-of-contact">
+        <h1 class="title">CONTACT ME!</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia commodi deleniti reiciendis ullam necessitatibus asperiores sit consectetur quaerat recusandae. Aliquam deleniti dolores totam quidem? Officiis molestiae impedit quos provident nam?</p>
+        <div class="contacts-container">
             <div class="way-contact"></div>
             <div class="way-contact"></div>
             <div class="way-contact"></div>
         </div>
     </section>
+    </main>
+    <script src="./script.js" type="text/javascript"></script>
 </body>
 </html>
